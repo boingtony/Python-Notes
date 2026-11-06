@@ -116,15 +116,15 @@ print("PhysicalEducation" in courses)
 for item in courses:
     print(item)
 
-# creates a for loop to show index of what item we are on in courses list
-# creates a new variable 'index' to return the index of the current course in the list
-# prints the index of the item we are on and the items in courses list
+# for loop using enumerate(), which gives back the index and the item together
+# unpacks them into two variables: 'index' (position) and 'course' (value)
+# prints the position number and the course on each loop
 for index, course in enumerate(courses):
-    print(index, courses)
+    print(index, course)
 
 # the same as above, however start= dictates the starting point
 for index, course in enumerate(courses, start=1):
-    print(index, courses)
+    print(index, course)
 
 # creates a new variable 'courses_str' which returns with .join() method on our list
 # this returns the list as a string separated by hyphens, as dictated by " - "
@@ -196,11 +196,11 @@ print(sets_example.union(sets_example_compare))
 
 # empty lists, tuples, and sets
 
-empty_list = []
-empty_list = list()
+# empty_list = []
+# empty_list = list()
 
-empty_tuple = ()
-empty_tuple = tuple()
+# empty_tuple = ()
+# empty_tuple = tuple()
 
 # empty_set = {} does not work! this creates an empty dictionary
-empty_set = set()
+# empty_set = set()
