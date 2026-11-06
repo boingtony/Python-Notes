@@ -25,7 +25,7 @@ courses.append("Physics")
 # adds Biology item to the list at the beginning due to 0 index
 courses.insert(0, "Biology")
 
-# prints new list of courses including Art and Biology items
+# prints new list of courses including Physics and Biology items
 print(courses)
 
 # new variable with Art and Education
@@ -69,12 +69,12 @@ courses.sort()
 
 print(courses)
 
-# creates a new variable with indexes in list
+# creates a new variable with values in list
 nums = [1, 5, 2, 4, 3]
 
 print(nums)
 
-# sorts indexes in list from lower value to higher
+# sorts values in list from lower value to higher
 nums.sort()
 
 print(nums)
@@ -95,11 +95,11 @@ sorted_nums = sorted(nums)
 print(sorted_courses)
 print(sorted_nums)
 
-# prints only the mininum and maximum index inside of list
+# prints only the minimum and maximum value inside of list
 print(min(nums))
 print(max(nums))
 
-# prints the sum of the indexes inside of list
+# prints the sum of the values inside of list
 print(sum(nums))
 
 # prints the index of CompSci within the list
@@ -119,11 +119,11 @@ for item in courses:
 # creates a for loop to show index of what item we are on in courses list
 # creates a new variable 'index' to return the index of the current course in the list
 # prints the index of the item we are on and the items in courses list
-for index in enumerate(courses):
+for index, course in enumerate(courses):
     print(index, courses)
 
 # the same as above, however start= dictates the starting point
-for index in enumerate(courses, start=1):
+for index, course in enumerate(courses, start=1):
     print(index, courses)
 
 # creates a new variable 'courses_str' which returns with .join() method on our list
@@ -133,7 +133,7 @@ courses_str = " - ".join(courses)
 print(courses_str)
 
 # takes our new string version of courses and turns it back into a list in a new variable
-# list entries are dictated by the ", " so each instance of " - " is a new item
+# list entries are dictated by the " - " so each instance of " - " is a new item
 new_list = courses_str.split(" - ")
 
 print(new_list)
@@ -150,8 +150,8 @@ print(list_example_2)
 # replaced item 3 'Confused' with 'Tired'
 list_example[3] = "Tired"
 
-# shows both the original list and the new list being changed
-# this is because lists are 'mutable' meaning edits to the original will effect others using it
+# shows both variables being changed. this is because the list that these variables are referencing has been changed
+# this is because lists are 'mutable' meaning edits to the list will affect the variables using it
 print(list_example)
 print(list_example_2)
 
@@ -162,7 +162,7 @@ tuple_example_2 = tuple_example
 print(tuple_example)
 print(tuple_example_2)
 
-# below comment will not work. as tuples are immutable, modifications to the list will not work
+# below comment will not work. as tuples are immutable, modifications to the tuple will not work
 # tuple_example[3] = "Tired"
 
 print(tuple_example)
@@ -173,6 +173,7 @@ print(tuple_example_2)
 # sets. dictated by curly brackets {}
 # sets dont care about order. their main use is to test whether a value is part of a set
 # or to remove duplicate values. for example, adding "Math" to the list twice would remove the second in print
+# sets will print in no particular order
 sets_example = {"History", "Math", "Physics", "Compsci"}
 
 print(sets_example)
@@ -181,7 +182,7 @@ print(sets_example)
 # sets are optimized for below methods. moreso than lists or tuples
 print("Compsci" in sets_example)
 
-sets_example_compare = {"History", "Math", "PE", "RE,", "IT"}
+sets_example_compare = {"History", "Math", "PE", "RE", "IT"}
 
 # prints the items that both variables share
 print(sets_example.intersection(sets_example_compare))
@@ -189,7 +190,8 @@ print(sets_example.intersection(sets_example_compare))
 # prints the items that sets_example has but sets_example_compare doesnt
 print(sets_example.difference(sets_example_compare))
 
-# prints items from both variables into one list
+# prints items from both variables into one set
+# any duplicate items only appear once
 print(sets_example.union(sets_example_compare))
 
 # empty lists, tuples, and sets

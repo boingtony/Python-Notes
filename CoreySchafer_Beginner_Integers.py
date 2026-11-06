@@ -8,18 +8,18 @@
 # modulus:          3 % 2
 
 # prints result of arithmetic operators for reference
-# addition: adds 
+# addition: adds
 print(3 + 2)
-# subtraction: subtracts 
+# subtraction: subtracts
 print(3 - 2)
-# multiplication: multiplies 
+# multiplication: multiplies
 print(3 * 2)
 # division: divides
 print(3 / 2)
 # floor division: divides and rounds down to nearest whole number
 print(3 // 2)
 # exponent: works with powers
-print(3 ** 2)
+print(3**2)
 # modulus: gives remainder after division
 print(3 % 2)
 
@@ -49,7 +49,7 @@ print(num_1 >= num_2)
 # less or equal:
 print(num_1 <= num_2)
 
-# set variable to integer 
+# set variable to integer
 num = 3
 
 # shows variable is class int/integer
@@ -90,8 +90,8 @@ print(round(3.5))
 print(round(3.75, 1))
 
 # variables that look like integers but are strings
-string_num_1 = '100'
-string_num_2 = '200'
+string_num_1 = "100"
+string_num_2 = "200"
 
 # shows the variables are strings that are being concatenated together
 print(string_num_1 + string_num_2)
